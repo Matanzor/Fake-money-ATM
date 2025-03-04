@@ -98,7 +98,18 @@ Since originally writing this project **1.5 years ago**, I have **gained more ex
 - Introduce a **dedicated logging class** for tracking:  
   - API requests & responses  
   - Transaction success/failures  
-  - Warnings and error handling  
+  - Warnings and error handling
+
+### **✅ 5. Preventing System-Wide & Per-User Request Abuse**  
+To prevent excessive transactions that could overload the system, we propose a **Rate Limiting Mechanism**:
+ 
+#### **🔹 System-Wide Rate Limiting**  
+- A global tracker ensures **no more than X transactions** occur within a time window.  
+- If the system is overloaded, **new transactions are temporarily blocked**.  
+
+#### **🔹 Per-User Rate Limiting**  
+- Each user is limited to a maximum of **Y requests per minute**.  
+- If exceeded, the user must **wait before making more requests**.  
 
 📌 **These improvements will make the system more efficient, scalable, and maintainable for future expansion.**  
 
