@@ -29,19 +29,20 @@ cd Fake-money-ATM
 
 ---
 
-💰 Usage
-1️⃣ Check Available Faucet Balances
+## 💰 Usage
+
+### 1️⃣ Check Available Faucet Balances
 Run the following command to see available funds:
 ```bash
 python3 SendMoney.py --get-status
 ```
-2️⃣ Request Fake Money for a Specific Coin
+### 2️⃣ Request Fake Money for a Specific Coin
 ```bash
 python3 SendMoney.py --coin_type BTC
 ```
 ✅ Sends BTC test funds to the developer’s wallet.
 
-3️⃣ Request Funds for Multiple Coins
+### 3️⃣ Request Funds for Multiple Coins
 ```bash
 python3 SendMoney.py --coin_type BTC ETH XRP
 ```
@@ -55,9 +56,11 @@ python3 SendMoney.py --all-coins
 
 ---
 
-⚙️ How It Works Internally
+## ⚙️ How It Works Internally
 🔹 SendMoney.py → User-facing script that sends requests to the ATM.
+
 🔹 SendMoneyApp.py → ATM backend that processes and executes transactions.
+
 🔹 config.json → Stores default amounts for each currency (pre-configured, no modification needed).
 
 ---
@@ -98,5 +101,5 @@ Since originally writing this project **1.5 years ago**, I have **gained more ex
   - Warnings and error handling  
 
 📌 **These improvements will make the system more efficient, scalable, and maintainable for future expansion.**  
-"""
+
 
