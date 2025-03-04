@@ -100,7 +100,7 @@ Since originally writing this project **1.5 years ago**, I have **gained more ex
   - Transaction success/failures  
   - Warnings and error handling
 
-### **✅ 5. Preventing System-Wide & Per-User Request Abuse**  
+### **✅ 6. Preventing System-Wide & Per-User Request Abuse**  
 To prevent excessive transactions that could overload the system, we propose a **Rate Limiting Mechanism**:
  
 #### **🔹 System-Wide Rate Limiting**  
@@ -109,7 +109,14 @@ To prevent excessive transactions that could overload the system, we propose a *
 
 #### **🔹 Per-User Rate Limiting**  
 - Each user is limited to a maximum of **Y requests per minute**.  
-- If exceeded, the user must **wait before making more requests**.  
+- If exceeded, the user must **wait before making more requests**.
+
+### **✅ 7. Efficiently Handling High Transaction Volume**
+To improve transaction processing performance and prevent delays when handling thousands of transactions, we implement Multi-Threaded Processing with Worker Pool.
+
+#### **🔹 Multi-Threaded Worker Pool**
+- Instead of processing transactions one by one, we use multiple worker threads to handle requests in parallel.
+- This prevents bottlenecks when large transaction queues build up.
 
 📌 **These improvements will make the system more efficient, scalable, and maintainable for future expansion.**  
 
